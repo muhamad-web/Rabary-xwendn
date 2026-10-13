@@ -1,1 +1,52 @@
 
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ڕێبەری خوێندن</title>
+<style>
+body{margin:0;background:#F1ECDE;color:#2F4B3C;font-family:Arial,sans-serif}
+header{background:#2F4B3C;color:white;text-align:center;padding:25px 12px}
+main{max-width:700px;margin:auto;padding:16px}
+.card{background:#FBF8EF;padding:20px;border-radius:18px;margin:16px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{padding:14px;border:0;border-radius:12px;background:#2F4B3C;color:white;font-size:16px}
+input{width:100%;box-sizing:border-box;padding:14px;border:1px solid #ccc;border-radius:12px;margin:12px 0;font-size:16px}
+.gold{color:#C99A3E}
+</style>
+</head>
+<body>
+<header>
+<h1>📚 ڕێبەری خوێندن</h1>
+<p>یارمەتیدەری زیرەکی دەستکردی پۆلی ١٢</p>
+</header>
+<main>
+<div class="card">
+<h2>بەخێربێیت قوتابیی ئازیز! 🌿</h2>
+<p>بابەتەکەت هەڵبژێرە و فێربوون دەست پێ بکە.</p>
+<div class="grid">
+<button onclick="pick('کوردی')">کوردی</button>
+<button onclick="pick('ئینگلیزی')">ئینگلیزی</button>
+<button onclick="pick('بیرکاری')">بیرکاری</button>
+<button onclick="pick('زیندەزانی')">زیندەزانی</button>
+<button onclick="pick('فیزیا')">فیزیا</button>
+<button onclick="pick('کیمیا')">کیمیا</button>
+</div>
+</div>
+<div class="card">
+<h2>💬 پرسیارەکەت بنووسە</h2>
+<input id="q" placeholder="پرسیارەکەت لێرە بنووسە...">
+<button onclick="ask()" style="width:100%">ناردن</button>
+<p id="a">پرسیارەکەت بنووسە بۆ دەستپێکردن.</p>
+</div>
+<footer style="text-align:center;padding:15px">
+<small>دروستکراوە لەلایەن موحەمەد — پارێزگای هەڵەبەجە</small>
+</footer>
+</main>
+<script>
+function pick(s){document.getElementById('q').value='بابەتی '+s+' بۆ پۆلی دوازدە بە کوردی ڕوون بکەرەوە.'}
+function ask(){document.getElementById('a').textContent='بەشی ژیری دەستکرد هێشتا پێوە نەبەستراوە. هەنگاوی دواتر پێویستە بۆ وەڵامدانی ڕاستەقینە.'}
+</script>
+</body>
+</html>
